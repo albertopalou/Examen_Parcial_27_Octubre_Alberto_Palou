@@ -14,4 +14,16 @@ class Matriz():
             self.filas = filas
         else:
             self.filas = []
-            
+
+    def columnas(self) -> list[list[int]]:
+        return[[filas[i] for filas in self.filas] for i in range(len(self.filas[0]))]
+
+    def num_filas(self) -> int:
+        return len(self.filas)
+    
+    def num_columnas(self) -> int:
+        return len (self.filas[0])
+    
+    def order(self) -> tuple[int, int]:
+        return(self.num_filas, self.num_columnas)
+        
