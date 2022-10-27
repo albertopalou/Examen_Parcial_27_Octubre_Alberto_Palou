@@ -64,3 +64,10 @@ class Polinomio():
         for i in range(0, mayor.grado+1):
             division = obtener
 
+    def eliminar(polinomio, valor, grado):
+        grado = polinomio.grado
+        valor = polinomio.valor
+        eliminar = int(input("Introduce el termino que desea eliminar: "))
+        if (eliminar == grado):
+            polinomio.grado = 0
+            return str(polinomio.valor) + "x^" + str(polinomio.grado)
