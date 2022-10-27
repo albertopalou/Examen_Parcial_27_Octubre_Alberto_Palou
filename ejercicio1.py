@@ -15,6 +15,10 @@ alumno1 = Alumno("Manuel García", 8)
 alumno2 = Alumno("Jorge Paredes", 4)
 alumno3 = Alumno("Mario Fernandez", 5)
 
+lista = Alumno.list[alumno1, alumno2, alumno3]
+
+print(lista.calificaion())
+
 print(alumno1.calificacion())
 print(alumno3.calificacion())
 print(alumno2.calificacion())
