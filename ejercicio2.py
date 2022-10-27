@@ -3,7 +3,10 @@ class Alumno():
     def __init__(self, nombre, nota):
         self.nombre = nombre
         self.nota = nota
-        print(f"El alumno {self.nombre} se ha creado con exito")
+        print(f"El alumno es: {self.nombre}")
+
+    def __str__(self):
+        return f"El alumno {self.nombre}, ha sacado un {self.nota}."
 
     def calificacion(self):
         if self.nota >= 5:
