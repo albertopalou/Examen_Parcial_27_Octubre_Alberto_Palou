@@ -11,5 +11,11 @@ class Alumno():
         else:
             return(f"{self.nombre} ha suspendido con un {self.valor}.")
 
-alumno = Alumno("Manuel García", 8)
-print(alumno.calificacion)
+alumno1 = Alumno("Manuel García", 8)
+alumno2 = Alumno("Jorge Paredes", 4)
+alumno3 = Alumno("Mario Fernandez", 5)
+
+print(alumno1.calificacion())
+print(alumno3.calificacion())
+print(alumno2.calificacion())
+
