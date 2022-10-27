@@ -36,3 +36,31 @@ class Polinomio():
             aux = aux.siguiente
         if(aux is not None and aux.informacion.termino == termino):
             return aux.informacion.valor
+        else:
+            return 0
+    
+    def mostrar_valor(polinomio):
+        aux = polinomio.termino_mayor
+        pol = " "
+        if (aux is not None):
+            while (aux is not None):
+                signo = " "
+                if (aux.informacion.valor >= 0):
+                    pol += signo + str(aux.informacion.valor) + "x^" + str(aux.informacion.termino)
+
+    def restar(polinomio1, polinomio2):
+        polinomio1=Polinomio(4,3)
+        polinomio2=Polinomio(3,2)
+        polinomio_aux=Polinomio()
+        mayor = polinomio1 if (polinomio1.grado > polinomio2.grado) else polinomio2
+        for i in range(0, mayor.grado+1):
+            resta = obtener_valor(polinomio1, i) - obtener_valor(polinomio2,i)
+            if(resta != 0):
+                crear_termino(polinomio_aux,i,resta)
+                return polinomio_aux
+    
+    def dividir(polinomio1, polinomio2):
+        mayor = polinomio1 if (polinomio1.grado > polinomio2.grado) else polinomio2
+        for i in range(0, mayor.grado+1):
+            division = obtener
+
