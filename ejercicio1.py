@@ -7,9 +7,9 @@ class Alumno():
 
     def calificacion(self):
         if self.nota >= 5:
-            return(f"{self.nombre} ha aprobado con un {self.valor}.")
+            return(f"{self.nombre} ha aprobado con un {self.nota}.")
         else:
-            return(f"{self.nombre} ha suspendido con un {self.valor}.")
+            return(f"{self.nombre} ha suspendido con un {self.nota}.")
 
 alumno1 = Alumno("Manuel García", 8)
 alumno2 = Alumno("Jorge Paredes", 4)
