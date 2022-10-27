@@ -24,6 +24,29 @@ class Matriz():
     def num_columnas(self) -> int:
         return len (self.filas[0])
     
-    def order(self) -> tuple[int, int]:
+    def orden(self) -> tuple[int, int]:
         return(self.num_filas, self.num_columnas)
-        
+
+    def cuadrada(self) -> bool:
+        return self.orden[0] == self.orden[1]
+    
+    def identidad(self):
+        valores = [
+            [0 if columna_num != filas_num else 1 for columna_num in range(self.num_filas)]
+            for filas_num in range(self.num_filas)
+        ]
+        return Matriz(valores)
+
+    def determinante(self) -> int:
+        if not self.cuadrada:
+            return 0
+        if self.orden == (0,0):
+            return 1
+        if self.orden == (1,1):
+            return int(self.filas[0][0])
+        if self.orden == (2,2):
+            return int(
+                (self.filas[0][0] * self.cofactors().filas[0][columna])
+                for columna in range(self.num_columnas)
+            )
+
